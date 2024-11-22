@@ -7,11 +7,11 @@ class JournalEntry(models.Model):
     content = models.TextField()
     tags = models.CharField(max_length=255, blank=True)
     mood = models.CharField(max_length=50, choices=[
-        ('happy', 'Happy'),
-        ('sad', 'Sad'),
-        ('neutral', 'Neutral'),
-        ('anxious', 'Anxious'),
-        ('angry', 'Angry')
+        ('happy', '😊 Happy'),
+        ('sad', '😢 Sad'),
+        ('neutral', '😐 Neutral'),
+        ('anxious', '😰 Anxious'),
+        ('angry', '😠 Angry')
     ], blank=True)
     media = models.FileField(upload_to='media/', blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
