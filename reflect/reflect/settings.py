@@ -71,7 +71,12 @@ TEMPLATES = [
     },
 ]
 
+
 WSGI_APPLICATION = "reflect.wsgi.application"
+
+LOGIN_REDIRECT_URL = "/"  # Redirect after successful login
+LOGOUT_REDIRECT_URL = "/users/login/"  # Redirect after logout
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
